@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.servotronics.androidchallenge.MainActivity" >
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:onClick="showEditDialog"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_edit" />
+
+    <RelativeLayout
+        android:id="@+id/main_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:background="#E6E6E6"
+            android:layout_alignParentBottom="true"  >
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="40dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:inputType="textMultiLine" >
+
+                <requestFocus />
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@+id/editText1"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp" >
+
+                <Button
+                    android:id="@+id/redButton"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FF0040"
+                    android:layout_marginLeft="25dp"
+                	android:layout_marginRight="5dp"
+                	android:onClick="SetToRedColor"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/orangeButton3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FE9A2E"
+                    android:layout_marginLeft="5dp"
+                	android:layout_marginRight="5dp"
+                	android:onClick="SetToOrangeColor"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/greenButton"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="#01DF3A"
+                    android:layout_marginLeft="5dp"
+                	android:layout_marginRight="5dp"
+                	android:onClick="SetToGreenColor"
+                    android:text="" />
+                
+                <Button
+                    android:id="@+id/blueButton"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="#0174DF"
+                    android:layout_marginLeft="5dp"
+                	android:layout_marginRight="5dp"
+                	android:onClick="SetToBlueColor"
+                    android:text="" />
+                
+                <Button
+                    android:id="@+id/purpleButton"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="#A901DB"
+                    android:layout_marginLeft="5dp"
+                	android:layout_marginRight="5dp"
+                	android:onClick="SetToPurpleColor"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#2E9AFE"
+                    android:layout_marginLeft="25dp"
+                	android:layout_marginRight="5dp"
+                	android:onClick="AddDataToDb"
+                    android:text="Submit" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/cancelbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/relativeLayout1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="#000000"
+            android:alpha="0.2"
+            android:onClick="cancelEditView"
+            android:text="" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
